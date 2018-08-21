@@ -3,10 +3,10 @@
 ## Objetivo
 Repositório para manter os arquivos da aula
 
-Comandos importantes para lembrar
+## Comandos importantes para lembrar
 ```
 git clone {endereço}
-```
+
 git add . (adicionar tudo)
 
 git add {nome do arquivo}
@@ -20,3 +20,11 @@ git status (ver a situation do working dir)
 git push (enviar para nuvem)
 
 export PAGER= (retirando erros do computador da univali)
+```
+
+```java
+public void main (String args[]){
+	int i = 0;
+	i++;
+}
+```
