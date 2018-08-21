@@ -23,8 +23,19 @@ export PAGER= (retirando erros do computador da univali)
 ```
 
 ```java
-public void main (String args[]){
+public static void main (String args[]){
 	int i = 0;
 	i++;
 }
 ```
+
+| tabela | é | daora |
+|--|--|--|
+| Paulo | Jose | Leo |
+| 1 | 2 | 3 |
+
+> teste
+
+---
+ 
+Por hoje é só.
