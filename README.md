@@ -1,22 +1,22 @@
 # Leonardo Serafin
 
-##Objetivo
+## Objetivo
 Repositório para manter os arquivos da aula
 
-## Comandos importantes para lembrar
+Comandos importantes para lembrar
+```
+git clone {endereço}
+```
+git add . (adicionar tudo)
 
-##git clone {endereço}
+git add {nome do arquivo}
 
-##git add . (adicionar tudo)
+git commit -m "{mensagem do commit}" (commitar)
 
-##git add {nome do arquivo}
+git log (ver o log)
+ 
+git status (ver a situation do working dir)
 
-##git commit -m "{mensagem do commit}" (commitar)
+git push (enviar para nuvem)
 
-##git log (ver o log)
-
-##git status (ver a situation do working dir)
-
-##git push (enviar para nuvem)
-
-## export PAGER= (retirando erros do computador da univali)
+export PAGER= (retirando erros do computador da univali)
