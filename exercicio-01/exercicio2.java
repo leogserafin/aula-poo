@@ -1,4 +1,5 @@
-public static void main(int args) {
+public class Exercicio2{
+public static void main(String[] args) {
         switch (args) {
             case 1:
                 System.out.println("domingo");
@@ -26,3 +27,4 @@ public static void main(int args) {
                 break;
         }
     }
+}
