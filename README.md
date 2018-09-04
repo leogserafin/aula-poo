@@ -39,3 +39,21 @@ public static void main (String args[]){
 ---
  
 Por hoje é só.
+
+## Enviando para um arquivos
+```
+// exemplo de try, catch junto com alteração de arquivos
+	try{
+		Path caminho = Paths.get("arquivo.txt"); 
+// se nao for falado de onde é o arquivo abre automaticamente o diretorio q se encontra o código
+
+		String conteudo = "Bolinha\nQuadradinho";
+		byte[] stringEmBytes = 
+		Files.write(path, bytes);
+		JOpt...("deu certo");
+	}catch(Exception e){
+		JOpt...("deu errado");
+	}
+
+
+```
