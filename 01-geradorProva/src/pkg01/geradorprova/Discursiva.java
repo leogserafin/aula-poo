@@ -9,7 +9,7 @@ package pkg01.geradorprova;
  *
  * @author 6093914
  */
-final class Discursiva extends Questao {
+public class Discursiva extends Questao{
 
     /**
      * @return the criteriosCorrecao
