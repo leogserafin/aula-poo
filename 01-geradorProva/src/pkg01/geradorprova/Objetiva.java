@@ -45,5 +45,15 @@ final class Objetiva extends Questao {
     public Objetiva() {
         this.opcoes = new String[5];
     }
+    
+    @Override
+    public String retornaQuestao(){
+        String questao = "("+this.getPeso()+") -"+this.getPergunta()+"\n";
+        String[] opcoes = this.getOpcoes();
+            for(int k = 0;k<5;k++){
+                questao += ((k+1)+") "+opcoes[k]+"\n");
+            }
+        return questao;
+    }
 
 }

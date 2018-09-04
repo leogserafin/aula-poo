@@ -89,24 +89,15 @@ public class Prova {
     }
     
     public String obtemProvaImpressao(){
-        String retorno = obtemDetalhes()+"\n___________________\n";
-        String questao = "";
-        String questao2 = "";
-        int i, j;
-        for(i = 0; i<this.discursiva.length;i++){
-            questao += ("\n"+(i+1)+"("+this.discursiva[i].getPeso()+") - ");
-            questao += (this.discursiva[i].getPergunta()+"\n"); 
+        String retorno = obtemDetalhes()+"\n_________________________________________\n";
+        
+        for(int i = 0; i<this.discursiva.length;i++){
+            retorno += this.discursiva[i].retornaQuestao();
         }
-        retorno += questao;
-        for(j=0; j<this.objetiva.length; j++){
-            questao2 += ("\n"+(i+1+j)+"("+this.objetiva[j].getPeso()+") - ");
-            questao2 += (this.objetiva[j].getPergunta()+"\n");
-            String[] opcoes = this.objetiva[j].getOpcoes();
-            for(int k = 0;k<5;k++){
-                questao2 += ((k+1)+") "+opcoes[k]+"\n");
-            }
+        
+        for(int j=0; j<this.objetiva.length; j++){
+            retorno += this.objetiva[j].retornaQuestao();
         }
-        retorno += questao2;
         return retorno;
     }
 

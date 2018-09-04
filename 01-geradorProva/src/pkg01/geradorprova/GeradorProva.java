@@ -56,7 +56,6 @@ public class GeradorProva {
         qtd = sc.nextInt();
         sc.nextLine();
         Objetiva o[] = new Objetiva[qtd];
-        String opcoes[] = new String[5];
         for (int i = 0; i < qtd; i++) {
             o[i] = new Objetiva();
             System.out.println("Digite a " + (i + 1) + "ª pergunta: ");
@@ -65,6 +64,7 @@ public class GeradorProva {
             o[i].setPeso(sc.nextInt());
             sc.nextLine();
             System.out.println("Digite as alternativas: ");
+            String opcoes[] = new String[5];
             for (int j = 0; j < 5; j++) {
                 System.out.println((j + 1) + "ª alternativa: ");
                 opcoes[j] = sc.nextLine();
@@ -79,7 +79,8 @@ public class GeradorProva {
             o[i].setRespostaCorreta(alternativa - 1);
         }
         x.setObjetiva(o);
-
+        
+        //print da prova
         System.out.println(x.obtemDetalhes());
         System.out.println(x.obtemProvaImpressao());
         //JOptionPane.showMessageDialog(null, x .obtemProvaImpressao());

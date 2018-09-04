@@ -9,7 +9,7 @@ package pkg01.geradorprova;
  *
  * @author 6093914
  */
-public class Discursiva extends Questao{
+public class Discursiva extends Questao {
 
     /**
      * @return the criteriosCorrecao
@@ -28,5 +28,9 @@ public class Discursiva extends Questao{
 
     public Discursiva() {
     }
-
+    
+    @Override
+    public String retornaQuestao(){
+        return "("+this.getPeso()+") -"+this.getPergunta()+"\n";
+    }
 }
