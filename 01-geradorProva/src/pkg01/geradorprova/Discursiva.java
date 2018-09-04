@@ -31,6 +31,6 @@ public class Discursiva extends Questao {
     
     @Override
     public String retornaQuestao(){
-        return "("+this.getPeso()+") -"+this.getPergunta()+"\n";
+        return "\n ("+this.getPeso()+") - "+this.getPergunta()+"\n";
     }
 }

@@ -5,12 +5,14 @@
  */
 package pkg01.geradorprova;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author 6093914
  */
 public class Prova {
-    
+
     /**
      * @return the nomeDisciplina
      */
@@ -72,9 +74,10 @@ public class Prova {
     private String data;
     private Discursiva[] discursiva;
     private Objetiva[] objetiva;
+    private ArrayList<Questao> questao;  
 
     public Prova() {
-        
+
     }
 
     public Prova(String n, int p, String local, String data) {
@@ -87,15 +90,15 @@ public class Prova {
     public String obtemDetalhes() {
         return "Nome da disciplina: " + this.getNomeDisciplina() + "\n" + "Peso: " + this.getPeso() + "\n" + "Local: " + this.getLocal() + "\n" + "data: " + this.getData();
     }
-    
-    public String obtemProvaImpressao(){
-        String retorno = obtemDetalhes()+"\n_________________________________________\n";
-        
-        for(int i = 0; i<this.discursiva.length;i++){
+
+    public String obtemProvaImpressao() {
+        String retorno = obtemDetalhes() + "\n_________________________________________\n";
+
+        for (int i = 0; i < this.discursiva.length; i++) {
             retorno += this.discursiva[i].retornaQuestao();
         }
-        
-        for(int j=0; j<this.objetiva.length; j++){
+
+        for (int j = 0; j < this.objetiva.length; j++) {
             retorno += this.objetiva[j].retornaQuestao();
         }
         return retorno;
