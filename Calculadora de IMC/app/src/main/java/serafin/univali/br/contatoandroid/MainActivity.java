@@ -18,8 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         public void CalculoIMC(View v){
-            EditText peso = findViewById(R.id.etPeso);
+            EditText a = findViewById(R.id.etPeso);
             EditText altura = findViewById(R.id.etAltura);
+            EditText c
             TextView imc = findViewById(R.id.tIMC);
 
             String alturaDigitada = altura.getText().toString();
