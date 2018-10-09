@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
                 double delta = (bEmDouble*bEmDouble)-(4*aEmDouble*cEmDouble);
 
-                double resultadoRaiz1 = ((-bEmDouble)+(int)Math.sqrt(delta))/(2*aEmDouble);
-                double resultadoRaiz2 = ((-bEmDouble)-(int)Math.sqrt(delta))/(2*aEmDouble);
+                double resultadoRaiz1 = ((bEmDouble*(-1))+(int)Math.sqrt(delta))/(2*aEmDouble);
+                double resultadoRaiz2 = ((bEmDouble*(-1))-(int)Math.sqrt(delta))/(2*aEmDouble);
 
                 x1.setText("1 Raiz: "+resultadoRaiz1);
                 x2.setText("2 Raiz: "+resultadoRaiz2);
