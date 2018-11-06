@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppPosto</string>
+    <string-array name="arrayPostos">
+        <item>Shell</item>
+        <item>Texaco</item>
+        <item>Petrobras</item>
+        <item>Ipiranga</item>
+        <item>Outros</item>
+    </string-array>
+</resources>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">APPCombustivel</string>
+    <string name="visualizar_lista">Visualizar Abastecimentos</string>
+    <string name="aut_mostra">Autonomia Atual</string>
+    <string name="add_ab">Adicionar Abastecimento</string>
+    <string name="km_atual_mostra">Quilometragem Atual:</string>
+    <string name="lt_abastc_mostra">Litros Abastecidos:</string>
+    <string name="data_mostra">Data do Abastecimento:</string>
+    <string name="posto_spinner_mostra">Posto:</string>
+    <string name="confirma">Confirmar</string>
+
+    <string-array name="Bandeiras">
+        <item>Ipiranga</item>
+        <item>Shell</item>
+        <item>Texaco</item>
+        <item>Petrobras</item>
+        <item>Outros</item>
+    </string-array>
+</resources>
