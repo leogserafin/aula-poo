@@ -34,15 +34,15 @@ public class AbastecimentoViewHolder extends RecyclerView.ViewHolder {
         this.tvData.setText( objetoAbastecimento.getData() );
 
         if(posto.equals("Texaco")){
-            ivPosto.setImageDrawable(ContextCompat.getDrawable(App.getContext(), R.drawable.untitled));
+            ivPosto.setImageResource(R.drawable.untitled);
         }else if(posto.equals("Petrobras")){
-            ivPosto.setImageDrawable(ContextCompat.getDrawable(App.getContext(), R.drawable.petrobras));
+            ivPosto.setImageResource(R.drawable.petrobras);
         }else if(posto.equals("Shell")){
-            ivPosto.setImageDrawable(ContextCompat.getDrawable(App.getContext(), R.drawable.shell));
+            ivPosto.setImageResource(R.drawable.shell);
         }else if(posto.equals("Ipiranga")){
-            ivPosto.setImageDrawable(ContextCompat.getDrawable(App.getContext(), R.drawable.ipiranga));
+            ivPosto.setImageResource(R.drawable.ipiranga);
         }else{
-            ivPosto.setImageDrawable(ContextCompat.getDrawable(App.getContext(), R.drawable.outros));
+            ivPosto.setImageResource(R.drawable.outros);
         }
     }
 }

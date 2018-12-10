@@ -37,6 +37,10 @@ public class VisualizarListaActivity extends AppCompatActivity {
         }
         startActivityForResult(intencao, RC_ADICIONAR_ABASTECIMENTO);
     }
+    public void telaVoltar(View v){
+        Intent intencao = new Intent(this.getApplicationContext(), MainActivity.class);
+        startActivity(intencao);
+    }
 
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

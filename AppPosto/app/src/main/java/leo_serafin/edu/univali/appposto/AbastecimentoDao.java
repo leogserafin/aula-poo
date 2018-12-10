@@ -12,7 +12,7 @@ public class AbastecimentoDao {
 
     private static ArrayList<Abastecimento> AL_CACHE = new ArrayList<>();
 
-    private static final String NOME_ARQUIVO = "Abastecimento.txt";
+    private static final String NOME_ARQUIVO = "Abastecimento14.txt";
 
     public static boolean salvar(Context c, Abastecimento aSerSalva){
 
@@ -21,7 +21,8 @@ public class AbastecimentoDao {
         String avEmString = "";
         avEmString += aSerSalva.getKm() + ";";
         avEmString += aSerSalva.getLitro() + ";";
-        avEmString += aSerSalva.getNome() + ";" + "\n";
+        avEmString += aSerSalva.getNome() + ";";
+        avEmString += aSerSalva.getData() + ";" + "\n";
 
         File refArquivo = new File( c.getFilesDir().getPath() + NOME_ARQUIVO );
 

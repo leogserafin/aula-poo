@@ -21,7 +21,7 @@ public class AbastecimentoAdapter extends RecyclerView.Adapter {
                 LayoutInflater.from(
                         parent.getContext()
                 ).inflate(
-                        R.layout.activity_visualizar_lista,
+                        R.layout.activity_gaveta_posto,
                         parent,
                         false
                 );
