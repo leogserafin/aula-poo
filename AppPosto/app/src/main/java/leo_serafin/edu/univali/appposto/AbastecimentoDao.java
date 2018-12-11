@@ -12,7 +12,7 @@ public class AbastecimentoDao {
 
     private static ArrayList<Abastecimento> AL_CACHE = new ArrayList<>();
 
-    private static final String NOME_ARQUIVO = "Abastecimento14.txt";
+    private static final String NOME_ARQUIVO = "Abastecimento67.txt";
 
     public static boolean salvar(Context c, Abastecimento aSerSalva){
 
@@ -22,6 +22,8 @@ public class AbastecimentoDao {
         avEmString += aSerSalva.getKm() + ";";
         avEmString += aSerSalva.getLitro() + ";";
         avEmString += aSerSalva.getNome() + ";";
+        avEmString += aSerSalva.getLatitude() + ";";
+        avEmString += aSerSalva.getLongitude() + ";";
         avEmString += aSerSalva.getData() + ";" + "\n";
 
         File refArquivo = new File( c.getFilesDir().getPath() + NOME_ARQUIVO );
@@ -56,7 +58,9 @@ public class AbastecimentoDao {
                 daVez.setKm(Float.parseFloat(partesDaLinha[0]));
                 daVez.setLitro(Float.parseFloat(partesDaLinha[1]));
                 daVez.setNome( partesDaLinha[2] );
-                daVez.setData( partesDaLinha[3] );
+                daVez.setLatitude(Double.parseDouble(partesDaLinha[3])  );
+                daVez.setLongitude( Double.parseDouble(partesDaLinha[4]) );
+                daVez.setData( partesDaLinha[5] );
                 AL_CACHE.add(daVez);
             }
 

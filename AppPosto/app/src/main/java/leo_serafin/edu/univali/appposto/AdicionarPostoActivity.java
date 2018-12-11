@@ -1,5 +1,6 @@
 package leo_serafin.edu.univali.appposto;
 
+import android.location.Location;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ public class AdicionarPostoActivity extends AppCompatActivity {
     EditText etkmAtual;
     EditText etLitros;
     EditText etData;
+    private boolean permissaofinal;
     private Spinner spPosto;
     private Float kmAntigo;
     private String postos[] = new String[]{"Texaco", "Shell", "Petrobras", "Ipiranga", "Outros"};
@@ -29,6 +31,7 @@ public class AdicionarPostoActivity extends AppCompatActivity {
         spPosto.setAdapter(adapter);
 
         kmAntigo = this.getIntent().getFloatExtra("kmAntigo", -1);
+        permissaofinal = this.getIntent().getBooleanExtra("permissao", false);
         etkmAtual = findViewById(R.id.etkmAtual);
         etLitros = findViewById(R.id.etLitros);
         etData = findViewById(R.id.etData);
@@ -38,20 +41,31 @@ public class AdicionarPostoActivity extends AppCompatActivity {
         Abastecimento abastecimento = new Abastecimento();
 
         if(etkmAtual.getText().toString().equals("")){
-            Toast.makeText(this.getApplicationContext(), "Campos nao preenchidos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getApplicationContext(), "Campos nao preenchidos (Km)", Toast.LENGTH_SHORT).show();
             return;
         }
         if(etLitros.getText().toString().equals("")){
-            Toast.makeText(this.getApplicationContext(), "Campos nao preenchidos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getApplicationContext(), "Campos nao preenchidos (Litros)", Toast.LENGTH_SHORT).show();
             return;
         }
         if(etData.getText().toString().equals("")){
-            Toast.makeText(this.getApplicationContext(), "Campos nao preenchidos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getApplicationContext(), "Campos nao preenchidos (Data)", Toast.LENGTH_SHORT).show();
             return;
         }
         if(Double.parseDouble(etkmAtual.getText().toString()) <= this.kmAntigo){
             Toast.makeText(this.getApplicationContext(), "Km antigo maior q novo!", Toast.LENGTH_SHORT).show();
             return;
+        }
+        if (permissaofinal == true) {
+            GPSprovider g = new GPSprovider(getApplicationContext());
+            Location l = g.getLocation();
+            if (l != null){
+                abastecimento.setLatitude(l.getLatitude());
+                abastecimento.setLongitude(l.getLongitude());
+            }
+        } else {
+            abastecimento.setLatitude(010);
+            abastecimento.setLongitude(010);
         }
 
         abastecimento.setKm(Float.parseFloat(etkmAtual.getText().toString()));
