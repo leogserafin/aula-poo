@@ -51,4 +51,25 @@
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/tvAutonomia"
         app:layout_constraintTop_toBottomOf="@+id/tvAutonomia" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="335dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="8dp"
+        android:text="Depois de horas e horas procurando uma solução para o MapView e sem conseguir sucesso, foi presumido que a funcionalidade não tem cabimento no emulador e só obteria sucesso no real device, lat e long colocadas nas gavetas para exposição e botão de mapas para teste com um device real também foi colocado (não tenho android para fazer o teste real)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="OBS:"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

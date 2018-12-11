@@ -12,7 +12,7 @@ public class AbastecimentoDao {
 
     private static ArrayList<Abastecimento> AL_CACHE = new ArrayList<>();
 
-    private static final String NOME_ARQUIVO = "Abastecimento67.txt";
+    private static final String NOME_ARQUIVO = "Abastecimento69.txt";
 
     public static boolean salvar(Context c, Abastecimento aSerSalva){
 
